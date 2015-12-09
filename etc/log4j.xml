@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	
+	<appender name="ROOTASYNC" class="org.apache.log4j.AsyncAppender">
+		
+	</appender>
+	
+	<appender name="OutPutSystemLog" class="org.apache.log4j.AsyncAppender">
+        <appender-ref ref="ASYNC_OutPutSystemLog"/>
+    </appender>		
+    
+	<appender name="ASYNC_OutPutSystemLog" class="com.ecareme.utils.log.PeriodRollingFileAppander">
+		<param name="Directory" value="log" />
+		<param name="Prefix" value="System." />
+		<param name="Suffix" value=".log" />
+		<param name="DatePattern" value="yyyy-MM-dd-HH-mm" />
+		<param name="Period" value="15" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyyMMdd HHmmss}|%m%n" />
+		</layout>
+	</appender>
+	
+	<logger name="com.asuscloud.releaseVersion.action.ParseXML">
+		<level value="info" />
+		<appender-ref ref="OutPutSystemLog" />
+	</logger>
+
+	<logger name="com.asuscloud.loadTestcase.service.LoadTestCase">
+		<level value="info" />
+		<appender-ref ref="OutPutSystemLog" />
+	</logger>
+	
+	<logger name="com.asuscloud.loadTestcase.service.TestCaseListener">
+		<level value="info" />
+		<appender-ref ref="OutPutSystemLog" />
+	</logger>
+	
+	<logger name="com.asuscloud.doTestcase.action.ControlFrameTestcase">
+		<level value="info" />
+		<appender-ref ref="OutPutSystemLog" />
+	</logger>
+		 
+	<root>
+		<level value="all"/>
+		 <appender-ref ref="ROOTASYNC"/>
+	</root>
+	
+</log4j:configuration>

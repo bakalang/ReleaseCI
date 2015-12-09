@@ -1,0 +1,109 @@
+<project basedir="." default="jar" name="CloudTestManage">
+
+	<!--====================================-->
+	<!--	setup properties				-->
+	<!--====================================-->
+	<target name="setup">
+		<property name="dir.utils" value="../../one.test/utils" />
+		<property name="dir.tester" value="D:\workspace\qualitytest\QEDServertester" />
+		<property name="dir.core" value="D:\workspace\qualitytest\QEDTestCore" />
+		<property name="dir.lib" value="D:\workspace\qualitytest\QEDlibs\libs" />
+		<property name="dir.src" value="./src" />
+		<property name="dir.etc" value="./etc" />
+		<property name="dir.obj" value="./obj" />
+		<property name="dir.lib.folder" value="./libs" />
+		<property name="jarname" value="run.testcase.jar" />
+
+		<path id="classpath.lib">
+			<fileset dir="${dir.utils}/">
+				<include name="utils.jar" />
+			</fileset>
+
+			<fileset dir="${dir.tester}/">
+				<include name="QEDServertester.jar" />
+			</fileset>
+			<fileset dir="${dir.core}/">
+				<include name="QEDTestCore.jar" />
+			</fileset>
+			
+			<fileset dir="${dir.lib}/apache/">
+				<include name="commons-collections-3.2.jar" />
+				<include name="commons-configuration-1.6.jar" />
+				<include name="commons-dbutils-1.3.jar" />
+				<include name="commons-lang-2.3.jar" />
+				<include name="commons-logging-1.1.1.jar" />
+				<include name="log4j-1.2.15.jar" />
+			</fileset>
+			
+			<fileset dir="${dir.lib}/google/">
+				<include name="guava-r08.jar" />
+				<include name="gson-2.1.jar" />
+			</fileset>
+
+			<fileset dir="${dir.lib}/svn/">
+				<include name="sequence-library-1.0.3.jar" />
+				<include name="sqljet-1.1.10.jar" />
+				<include name="svnkit-1.8.9.jar" />
+			</fileset>
+
+			<fileset dir="${dir.lib}/jdom/">
+				<include name="jdom-1.1.jar" />
+			</fileset>
+			
+			<fileset dir="${dir.lib}/testNG/">
+				<include name="testng-6.8.jar" />
+			</fileset>
+			
+			<fileset dir="${dir.lib}/tomcat/">
+				<include name="servlet-api.jar" />
+			</fileset>
+			
+		</path>
+	</target>
+
+	<!--====================================-->
+	<!--	compile	java source				-->
+	<!--====================================-->
+	<target depends="setup" name="compile">
+
+		<mkdir dir="${dir.obj}" />
+		<javac debug="on" optimize="on" encoding="utf-8" destdir="${dir.obj}" includeantruntime="false">
+			<src path="${dir.src}" />
+			<classpath refid="classpath.lib" />
+		</javac>
+	</target>
+
+	<!--====================================-->
+	<!--	package jar file				-->
+	<!--====================================-->
+	<target name="jar" depends="compile">
+		<!-- copy libs-->
+		<copy file="${dir.utils}/utils.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.lib}/apache/commons-collections-3.2.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.lib}/apache/commons-configuration-1.6.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.lib}/apache/commons-dbutils-1.3.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.lib}/apache/commons-lang-2.3.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.lib}/apache/commons-logging-1.1.1.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.lib}/apache/log4j-1.2.15.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.lib}/google/guava-r08.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.lib}/google/gson-2.1.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.lib}/jdom/jdom-1.1.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.lib}/testNG/testng-6.8.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.lib}/tomcat/servlet-api.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.tester}/QEDServertester.jar" todir="${dir.lib.folder}"/>
+		<copy file="${dir.core}/QEDTestCore.jar" todir="${dir.lib.folder}"/>
+		
+		
+		<jar destfile="${jarname}" basedir="${dir.obj}" />
+	</target>
+
+	<!--====================================-->
+	<!--		clean up task				-->
+	<!--====================================-->
+	<target name="clean" depends="setup">
+		<delete dir="${dir.obj}" />
+		<delete file="${jarname}" />
+	</target>
+
+</project>
+

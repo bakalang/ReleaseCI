@@ -1,0 +1,14 @@
+<config>
+ 	<db>
+		<className>com.mysql.jdbc.Driver</className>
+		<address>192.168.1.220</address>
+		<port>13306</port>
+		<account>root</account>
+		<passwd>cc</passwd>
+		<databaseName>deployment</databaseName>
+	</db>
+	
+	<sourcePath>/root/文件/build_source/</sourcePath>
+	<etcPath>etc</etcPath>
+</config>
+

@@ -1,0 +1,51 @@
+<config>
+	<db>
+		<className>org.sqlite.JDBC</className>
+		<path>D:/eclipse/testspace/qedtest/CloudReleaseManage/db/omnistoreVer.db
+		</path>
+	</db>
+	<tng>
+		<sp></sp>
+		<sg>192.168.3.180/sg</sg>
+		<isHomeCloud>0</isHomeCloud>
+		<!-- 
+		<testPackage>
+			<testName>inforelay</testName>
+			<testClass>com.ecareme.test.intergration.oministore.TestBasicIR</testClass>
+			<userId>tester001</userId>
+			<password>1qaz@WSX</password>
+			<userId_2></userId_2>
+			<password_2></password_2>	
+		</testPackage>
+		
+		<testPackage>
+			<testName>webrelay</testName>
+			<testClass>com.ecareme.test.intergration.oministore.TestBasicWR</testClass>
+			<userId>tester001</userId>
+			<password>1qaz@WSX</password>
+			<userId_2></userId_2>
+			<password_2></password_2>	
+		</testPackage>
+		 -->
+		<testPackage>
+			<testName>search</testName>
+			<testClass>com.ecareme.test.intergration.oministore.TestBasicSearch</testClass>
+			<userId>tester001</userId>
+			<password>1qaz@WSX</password>
+			<userId_2></userId_2>
+			<password_2></password_2>	
+		</testPackage>
+		<testPackage>
+			<testName>emr</testName>
+			<testClass>com.ecareme.test.intergration.oministore.TestBasicEMR</testClass>
+			<userId>tester001</userId>
+			<password>1qaz@WSX</password>
+			<userId_2></userId_2>
+			<password_2></password_2>	
+		</testPackage>
+		
+		<outputPath>D:/tmp</outputPath>
+		 
+	</tng>
+</config>
+

@@ -1,0 +1,46 @@
+<config>
+	<db>
+		<className>org.sqlite.JDBC</className>
+		<path>D:/eclipse/testspace/qedtest/CloudReleaseManage/db/omnistoreVer.db
+		</path>
+	</db>	
+	<tng>
+		<sp></sp>
+		<sg>192.168.3.185:50080/sg</sg>
+		<wr>192.168.3.185:50080/</wr>
+		<ir>192.168.3.185:50080/ir</ir>
+		<isHomeCloud>1</isHomeCloud>
+				
+		<testPackage>		
+			<testcase>inforelay</testcase>
+			<class>com.ecareme.test.intergration.oministore.TestBasicIR</class>
+			<users>
+				<userId>joshtest007@gmail.com</userId>
+				<password>e3890e43377e4b4eaffde93898ac047f</password>
+			</users>
+		</testPackage>
+		<!--  
+		<testPackage>
+			<testName>inforelay</testName>
+			<testClass>com.ecareme.test.intergration.oministore.TestBasicIR</testClass>
+			<sp>sp.yostore.net:8443</sp>
+			<sg>192.168.1.226:8080</sg>
+			<isHomeCloud>0</isHomeCloud>
+			<userId>14071811123449186@gmail.com</userId>
+			<password>14071811</password>
+		</testPackage>	
+		
+		<testPackage>
+			<testName>webrelay</testName>
+			<testClass>com.ecareme.test.intergration.oministore.TestBaseWR</testClass>
+			<sg>192.168.3.185:50080/sg</sg>
+			<isHomeCloud>1</isHomeCloud>
+			<userId>joshtest094@gmial.com</userId>
+			<password>61b022b07722437788058d19fcdfe8e8</password>
+		</testPackage>	
+		 -->	
+		<outputPath>D:/tmp</outputPath>
+		
+	</tng>
+</config>
+

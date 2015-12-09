@@ -1,0 +1,53 @@
+<config>
+	<db>
+		<className>org.sqlite.JDBC</className>
+		<path>D:/eclipse/testspace/qedtest/CloudReleaseManage/db/omnistoreVer.db
+		</path>
+	</db>
+	<tng>
+		<!-- sp>sp.yostore.net:8080</sp>-->
+		<sg>192.168.1.226:8080</sg>
+		<wr>192.168.1.226:8888</wr> 
+		<ir>192.168.1.201:9099</ir>
+		<isHomeCloud>0</isHomeCloud>
+		
+		<testPackage>		
+			<testcase>inforelay</testcase>
+			<class>com.ecareme.test.intergration.oministore.TestBasicIR</class>
+			<users>
+				<userId>ssed00002</userId>
+				<password>ssed00002</password>
+			</users>
+		</testPackage>
+		<testPackage>
+			<testcase>webrelay</testcase>
+			<class>com.ecareme.test.intergration.oministore.TestBasicWR</class>
+			<users>
+				<userId>ssed00002</userId>
+				<password>ssed00002</password>
+			</users>
+		</testPackage>
+		
+		<!--  
+		<testPackage>
+			<testcase>servicegateway</testcase>
+			<class>com.ecareme.test.intergration.oministore.TestBasicSG</class>
+			<users>
+				<userId>150420115437780133@gmail.com</userId>
+				<password>15042011</password>
+			</users>
+			<users>
+				<userId>150420115437780133@gmail.com</userId>
+				<password>15042011</password>
+			</users>
+		</testPackage>
+		 <testPackage> <name>search</name> <class>com.ecareme.test.intergration.oministore.TestBasicSearch</class> 
+			<userId>140717045214299205@gmail.com</userId> <password>14071704</password> 
+			<u2>150105022701394738@gmail.com</u2> <p2>15010502</p2> <u3>150105022816045359@gmail.com</u3> 
+			<p3>15010502</p3> </testPackage> <testPackage> <name>emr</name> <class>com.ecareme.test.intergration.oministore.TestBasicEMR</class> 
+			<userId>emr00002</userId> <password>emr00002</password> <u2></u2> <p2></p2> 
+			<u3></u3> <p3></p3> </testPackage> -->
+		<outputPath>D:/tmp</outputPath>
+	</tng>
+</config>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="etc"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/apache-commons"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/apache-log4j"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/google"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jdom"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/testNG"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/tomcat"/>
+	<classpathentry kind="lib" path="forms-1.3.0.jar" sourcepath="forms-1.3.0-src.zip"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/svn"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jakarta-poi"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/driver"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/QEDServertester"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/QEDTestCore"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/asuscloud"/>
+	<classpathentry kind="lib" path="/QEDServertester/QEDServertester.jar"/>
+	<classpathentry kind="lib" path="/QEDTestCore/QEDTestCore.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Tool"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

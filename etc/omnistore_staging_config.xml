@@ -1,0 +1,37 @@
+<config>
+	<db>
+		<className>org.sqlite.JDBC</className>
+		<path>D:/eclipse/testspace/qedtest/CloudReleaseManage/db/omnistoreVer.db
+		</path>
+	</db>
+	<tng>
+		<sg>210.65.114.128:80</sg>
+		<isHomeCloud>0</isHomeCloud>
+		<testPackage>
+			<testName>inforelay</testName>
+			<testClass>com.ecareme.test.intergration.oministore.TestBasicIR</testClass>
+			<userId>ssed00002</userId>
+			<password>ssed00002</password>
+		</testPackage>
+		<!-- 
+		<testPackage>
+			<testName>webrelay</testName>
+			<testClass>com.ecareme.test.intergration.oministore.TestBasicWR</testClass>
+			<sg>192.168.1.226:8080</sg>
+			<isHomeCloud>0</isHomeCloud>
+			<userId>14071811123449186@gmail.com</userId>
+			<password>14071811</password>
+		</testPackage>
+		<testPackage>
+			<testName>search</testName>
+			<testClass>com.ecareme.test.intergration.oministore.TestBasicSearch</testClass>
+			<sg>192.168.1.226:8080</sg>
+			<isHomeCloud>0</isHomeCloud>
+			<userId>140717045214299205@gmail.com</userId>
+			<password>14071704</password>
+		</testPackage>
+		 -->
+		<outputPath>D:/tmp</outputPath>
+	</tng>
+</config>
+

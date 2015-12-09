@@ -1,0 +1,1 @@
+java -cp .;etc;libs/*;.\run.testcase.jar com.asuscloud.doTestcase.action.ControlFrameTestcase
