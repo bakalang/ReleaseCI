@@ -53,7 +53,6 @@ public class SVNAction extends SVNBase implements TestcaseConstant
 		String remark = null;
 		long lastVersion = entry.getRevision();
 		long dbVersion = projectDAO.getProjectVersion(String.valueOf(projectNo));
-		System.out.println("no = " + String.valueOf(projectNo) + ", path = " + path + ",  dbVersion = " + dbVersion + ", lastVersion = " + lastVersion);
 		log.info("no = " + String.valueOf(projectNo) + ", path = " + path + ",  dbVersion = " + dbVersion + ", lastVersion = " + lastVersion);
 		if ( lastVersion > dbVersion )
 		{
@@ -68,7 +67,6 @@ public class SVNAction extends SVNBase implements TestcaseConstant
 				projectCheckoutDAO.insertCheckout(DATETIME.format(c.getTime()), String.valueOf(projectNo), String.valueOf(lastVersion), remark);
 
 				Map<String, String> configChangedPathMap = getModifiedConfiguration(repository.log(new String[]{""}, null, dbVersion, lastVersion, true, true));
-				System.out.println("currentVersionWithModifiedConfiguration size=" + configChangedPathMap.size());
 				log.info("currentVersionWithModifiedConfiguration size=" + configChangedPathMap.size());
 
 				if ( remark != null && configChangedPathMap.size() > 0 )

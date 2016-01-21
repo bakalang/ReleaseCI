@@ -28,10 +28,11 @@ public class SvnRepositoryService extends SVNAction
 	{
 //		 String moduleName = "portalapi";
 		// String moduleName = "otm";
-		// String moduleName = "inforelayapi";
-		 String moduleName = "filerelayapi";
+//		 String moduleName = "inforelayapi";
+//		 String moduleName = "filerelayapi";
+//		 String moduleName = "doc.viewer";
 //		 String moduleName = "MetadataServerAPI";
-//		String moduleName = "servicegatewayapi";
+		String moduleName = "servicegatewayapi";
 		// String moduleName = "ManagerStudio-FETnet";
 		// String moduleName = "dao.omnistore";
 		// String moduleName = "servicegatewayapi";
@@ -56,10 +57,8 @@ public class SvnRepositoryService extends SVNAction
 			svnaction.setup(path, login);
 			
 			// chechout
-			System.out.println("start  " + path + " checkout!");
 			log.info("start  " + path + " checkout!");
 			svnaction.checkout(projectNo, path, projectNo==project.getProjectNo() );		
-			System.out.println("----------------------------------------------");
 			log.info("----------------------------------------------");
 		}
 		return;
