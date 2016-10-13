@@ -26,17 +26,32 @@ public class SvnRepositoryService extends SVNAction
 
 	public static void main(String[] args) throws Exception
 	{
+//		 String moduleName = "EmailSender";
 //		 String moduleName = "portalapi";
-		// String moduleName = "otm";
+//		String moduleName = "DaemonBO";
+//		 String moduleName = "fulltext";
+//		 String moduleName = "otm";
 //		 String moduleName = "inforelayapi";
 //		 String moduleName = "filerelayapi";
-//		 String moduleName = "doc.viewer";
+//		 String moduleName = "AuthenticationBroker_ad";
+//		 String moduleName = "locallicense";
+//		 String moduleName = "globallicense";
+//		 String moduleName = "coral";
+//		 String moduleName = "eventhandler";
+//		 String moduleName = "solrcommander";
+//		 String moduleName = "doc.viewer";	
 //		 String moduleName = "MetadataServerAPI";
-		String moduleName = "servicegatewayapi";
-		// String moduleName = "ManagerStudio-FETnet";
+//		String moduleName = "amos_processor";
+//		String moduleName = "amos";
+//		String moduleName = "spacecollector";
+//			String moduleName = "servicegatewayapi";
+//		 String moduleName = "ManagerStudio-FETnet";
+//		String moduleName="utils";
 		// String moduleName = "dao.omnistore";
-		// String moduleName = "servicegatewayapi";
-
+//		 String moduleName = "servicegatewayapi";
+//		String moduleName ="userrightchanged";
+		//		String moduleName = "serverapi";
+		String moduleName ="CapacityTranscendenceNotifier";
 		checkoutProject(login, moduleName);
 	}
 
